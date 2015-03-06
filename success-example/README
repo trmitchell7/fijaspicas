@@ -1,0 +1,12 @@
+esto (tal vez pueda ser llamado software) se distribuye de acuerdo a los
+términos de la licencia GPL versión 2.0
+
+El programa tiene varias opciones que considero relativamente útiles. Para
+saber cómo utilizarlo y los comandos disponibles escriba:
+
+python pyf.py --help
+
+Sugerencias, comentarios, bugs? Escríbame
+
+Javier Rojas
+jerojasro@devnull.li

@@ -1,0 +1,7 @@
+hacer una versión más general, capaz de adivinar números de N dígitos
+
+actualmente el limitante es la cantidad de posibles tuplas generadas, 
+que es 10 P N (10 permutado N). Con Ns más grandes la cosa se vuelve no trivial
+
+La idea sería hacerlo mediante (creo) propagación de constraints, al estilo
+del solver de sudokus de Peter Norvig
