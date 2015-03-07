@@ -1,27 +1,32 @@
 #!/usr/bin/python3
 
-answer = list(map(int, input("Please enter correct answer: ")))
+answer = input("\n\nPlease enter correct answer: ")
 
 def checkAnswer():
-    question = list(map(int, input("Please enter your guess: ")))
-    fija = 0
-    pica = 0
-    for i in range(4):
-        if answer[i] == question[i]:
-            fija += 1
+    question = input("\n\nPlease enter your guess: ")
+    if len(question) == 4 and question.isdigit():
+        fija = 0
+        pica = 0
+        for i in range(4):
+            if answer[i] == question[i]:
+                fija += 1
 
-    for n in answer:
-        for p in range(4):
-            if n == question[p]:
-                pica += 1
+        for n in answer:
+            for p in range(4):
+                if n == question[p]:
+                    pica += 1
 
-    pica = pica - fija
+        pica = pica - fija
 
-    print ("Guess: " + ''.join(str(e) for e in question) + "\tFijas: " + str(fija) + "\tPicas: " + str(pica))
-    return fija
+        print ("Guess: " + ''.join(str(e) for e in question) + "\tFijas: " + str(fija) + "\tPicas: " + str(pica))
+        return fija
+
+    else:
+        print ("Guess needs to be 4 numbers, please try entering your guess again. \n \n")
+        checkAnswer()
 
 def playGame():
-    tries = 0
+    tries = 1
     while checkAnswer() < 4:
         tries += 1
         print ("Guess again!")
