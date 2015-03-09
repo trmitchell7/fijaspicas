@@ -23,7 +23,7 @@ def checkAnswer():
 
     else:
         print ("Guess needs to be 4 numbers, please try entering your guess again. \n \n")
-        checkAnswer()
+        return checkAnswer()
 
 def playGame():
     tries = 1
