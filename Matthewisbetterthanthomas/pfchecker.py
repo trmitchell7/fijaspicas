@@ -55,9 +55,9 @@ def play():
     while errorChecking(inputGuess()) == False:
         print ("Guess needs to be 4 nonrepeating numbers, please try entering your guess again.")
     while checkAnswer(answer, guess) < 4:
+        print ("Guess again!")
         while errorChecking(inputGuess()) == False:
             print ("Guess needs to be 4 nonrepeating numbers, please try entering your guess again.")
-        print ("Guess again!")
         tries += 1
     print ("You won in %s tries!" % (tries))
 
